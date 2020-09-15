@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+table, th, td {
+    border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+</head>
+ 
+<body bgcolor="pink">
+   <h1 style="text-align:left;">UNIVERSITIES  PERFORMANCE  SCORE  PREDICTION</h1>
+	
+              
+    <form action='/predict' method="post" class="col s12">
+      <table  style="width:50%" bgcolor="white">
+	  <tr ><td >
+	  <b>Teaching</b>
+            <td> 	
+          <input  name="Teaching"   placeholder="score" required="required" id="id1" type="number" min="1" max="100">
+      </td>  </tr>
+        
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var inpObj = document.getElementById("id1");
+  if (!inpObj.checkValidity()) {
+    document.getElementById("demo").innerHTML = inpObj.validationMessage;
+  } 
+} 
+</script>
+
+
+
+        <tr><td>
+			<b>Research</b>
+            <td>  
+            <input  name="Research" placeholder="score" required="required" id="id2" type="number" min="1" max="100"> 
+          </td></tr>
+            <p id="demo1"></p>
+
+<script>
+function myFunction() {
+  var inpObj = document.getElementById("id2");
+  if (!inpObj.checkValidity()) {
+    document.getElementById("demo1").innerHTML = inpObj.validationMessage;
+  } 
+} 
+</script>
+		
+
+        <tr><td>
+			<b>Citations</b>
+            <td>  
+			<input  name="Citations"  placeholder="score" required="required" id="id3" type="number" min="1" max="100">
+    </td></tr>
+      <p id="demo2"></p>
+
+<script>
+function myFunction() {
+  var inpObj = document.getElementById("id3");
+  if (!inpObj.checkValidity()) {
+    document.getElementById("demo2").innerHTML = inpObj.validationMessage;
+  } 
+} 
+</script>
+        
+
+          <tr><td>
+      <b>Industry_Income</b>
+            <td>  
+      <input  name="Industry_Income"  placeholder=" score" required="required" id="id4" type="number" min="1" max="100">
+    </td></tr>
+      <p id="demo3"></p>
+
+<script>
+function myFunction() {
+  var inpObj = document.getElementById("id4");
+  if (!inpObj.checkValidity()) {
+    document.getElementById("demo3").innerHTML = inpObj.validationMessage;
+  } 
+} 
+</script>
+        
+
+           <tr><td>
+      <b>International_Outlook</b>
+            <td>  
+      <input  name="International_Outlook"  placeholder="score" required="required" id="id5" type="number" min="1" max="100">
+    </td></tr>
+      <p id="demo4"></p>
+
+<script>
+function myFunction() {
+  var inpObj = document.getElementById("id5");
+  if (!inpObj.checkValidity()) {
+    document.getElementById("demo4").innerHTML = inpObj.validationMessage;
+  } 
+} 
+</script>
+        
+
+		</table>
+    <br>
+          <button style="text-align:center;" type="submit" onclick="myFunction()" >Predict </button>
+      
+    </form>
+       
+
+      <br>{{pred}}</br>
+
+    
+
+  </body>
+</html>
